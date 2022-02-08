@@ -6,7 +6,7 @@
     <RootNamespace>_02.CombinatorialProblems</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>PermutationsWithRepetition</StartupObject>
+    <StartupObject>Combinations</StartupObject>
   </PropertyGroup>
 
 </Project>
