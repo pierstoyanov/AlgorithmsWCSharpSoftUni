@@ -1,0 +1,15 @@
+            var rows = int.Parse(Console.ReadLine());
+            var cols = int.Parse(Console.ReadLine());
+
+            var map = new char[rows, cols];
+
+            for (int r = 0; r < rows; r++)
+            {
+                var rowElem = Console.ReadLine();
+
+                for (int c = 0; c < cols; c++)
+                {
+                    map[r, c] = rowElem[c];
+                }
+
+            }

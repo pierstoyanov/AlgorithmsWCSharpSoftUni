@@ -1,0 +1,18 @@
+        private static void Explore(char[,] map, int row, int col)
+        {
+            if (IsOutside(map, row, col) || IsVisited(map, row, col) || IsDirt(map, row, col))
+            {
+                return;
+            }
+
+            map[row, col] = VisitedSym;
+
+            Explore(map, row - 1, col); //UP
+            Explore(map, row + 1, col); //DOWN
+            Explore(map, row, col - 1); //LEFT
+            Explore(map, row, col + 1); //RIGHT
+            Explore(map, row - 1, col - 1); //Diag UP/LEFT
+            Explore(map, row - 1, col + 1); //Diag UP/RIGHT
+            Explore(map, row + 1, col - 1); //Diag DOWN/LEFT
+            Explore(map, row + 1, col + 1); //Diag DOWN/RIGHT
+        }
