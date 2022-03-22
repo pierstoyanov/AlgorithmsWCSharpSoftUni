@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net5.0</TargetFramework>
+    <RootNamespace>_04.Searching_Sorting_and_Greedy_Algorithms_Lab</RootNamespace>
+    <StartupObject>SetCover</StartupObject>
+  </PropertyGroup>
+
+</Project>
