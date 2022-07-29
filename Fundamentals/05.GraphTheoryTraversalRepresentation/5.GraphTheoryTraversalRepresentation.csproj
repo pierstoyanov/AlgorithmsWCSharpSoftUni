@@ -6,7 +6,7 @@
     <RootNamespace>_6.GraphTheoryTraversalRepresentation</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>TopologicalSortingDFS</StartupObject>
+    <StartupObject>ShortestPathUnweighted</StartupObject>
   </PropertyGroup>
 
 </Project>

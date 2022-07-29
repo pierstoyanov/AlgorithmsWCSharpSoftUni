@@ -30,3 +30,6 @@ while graph not empty:
 - remove edge from graph
 
 обърнат списък -> stack
+
+Sortest path unweigted graph > BFS
+
