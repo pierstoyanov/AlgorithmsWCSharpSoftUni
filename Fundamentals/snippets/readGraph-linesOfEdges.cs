@@ -2,7 +2,7 @@
 
 private static List<int>[] graph;
 
-public static void Main(string[] args)
+static void Main(string[] args)
 {
     var n = int.Parse(Console.ReadLine());
     var edges = int.Parse(Console.ReadLine());
