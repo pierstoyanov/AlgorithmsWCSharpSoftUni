@@ -29,5 +29,30 @@ class LongestCommonSubsequence
         }
         
         Console.WriteLine((lcs[str1.Length, str2.Length]).ToString());
+
+        //reconstruct path
+        var row = str1.Length;
+        var col = str2.Length;
+        var commonEl = new Stack<char>();
+
+        while (row > 0 && col > 0)
+        {
+            if (str1[row - 1] == str2[col - 1])
+            {
+                commonEl.Push(str1[row - 1]);
+                row -= 1;
+                col -= 1;
+            }
+            else if (lcs[row - 1, col] > lcs[row, col - 1])
+            {
+                row -= 1;
+            }
+            else
+            {
+                col -= 1;
+            }
+        }
+
+        Console.WriteLine(string.Join(" ", commonEl));
     }
 }
