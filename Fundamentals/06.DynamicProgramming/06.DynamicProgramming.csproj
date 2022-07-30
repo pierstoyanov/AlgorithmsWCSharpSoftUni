@@ -6,7 +6,7 @@
     <RootNamespace>_06.DynamicProgramming</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>SubSumWithRepetition</StartupObject>
+    <StartupObject>MoveDownRightSum</StartupObject>
   </PropertyGroup>
 
 </Project>
