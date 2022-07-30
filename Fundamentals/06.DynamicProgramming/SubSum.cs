@@ -7,7 +7,7 @@ class SubSum
     {
         var nums = new[] { 3, 5, 1, 4, 2 };
         var possibleSums = GetAllPossibleSums(nums);
-    
+        Console.WriteLine(string.Join(" ", possibleSums));
     }
 
     private static HashSet<int> GetAllPossibleSums(int[] nums)
