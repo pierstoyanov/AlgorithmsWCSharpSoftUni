@@ -53,7 +53,7 @@ class DijkstraGraphSearch
         // create distance arr
         var biggestNode = edgesByNode.Keys.Max();
         distance = new double[biggestNode + 1];
-        for (int node = 0; node < biggestNode; node++)
+        for (int node = 0; node <= biggestNode; node++)
         {
             distance[node] = double.PositiveInfinity;
         }
@@ -75,15 +75,15 @@ class DijkstraGraphSearch
         {
             var minNode = pq.Dequeue();
 
-/*            if (double.IsPositiveInfinity(minNode))
+            if (double.IsPositiveInfinity(minNode))
             {
                 break;
-            }*/
+            }
 
-/*            if (minNode == endNode)
+            if (minNode == endNode)
             {
                 break;
-            }*/
+            }
 
             foreach (var edge in edgesByNode[minNode])
             {
