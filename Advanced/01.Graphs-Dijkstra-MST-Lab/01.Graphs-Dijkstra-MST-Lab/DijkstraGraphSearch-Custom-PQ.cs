@@ -211,23 +211,27 @@ class DijkstraGraphSearchCustomPQ
                     distance[otherNode] = newDistance;
                     pq.Enqueue(otherNode, (int)distance[otherNode]);
                 }
-               /* // update distance arr
-                distance[otherNode] = Math.Min(distance[otherNode], newDistance);
-*/
             }
         }
 
-        Console.WriteLine(distance[endNode]);
-
-        var currentNode = endNode;
-        var path = new List<int>();
-        while (currentNode != -1)
+        if (double.IsPositiveInfinity(distance[endNode]))
         {
-            path.Add(currentNode);
-            currentNode = parent[currentNode];
+            Console.WriteLine("There is no such path.");
         }
+        else
+        {
+            Console.WriteLine(distance[endNode]);
 
-        path.Reverse();
-        Console.WriteLine(string.Join(' ', path));
+            var currentNode = endNode;
+            var path = new List<int>();
+            while (currentNode != -1)
+            {
+                path.Add(currentNode);
+                currentNode = parent[currentNode];
+            }
+
+            path.Reverse();
+            Console.WriteLine(string.Join(' ', path));
+        }
     }
 }
