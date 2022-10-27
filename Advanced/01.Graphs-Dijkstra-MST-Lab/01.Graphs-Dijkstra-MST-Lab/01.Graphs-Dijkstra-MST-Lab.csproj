@@ -6,7 +6,7 @@
     <RootNamespace>_01.Graphs_Dijkstra_MST_Lab</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>DijkstraGraphSearchCustomPQ</StartupObject>
+    <StartupObject>Kruskal</StartupObject>
   </PropertyGroup>
 
 </Project>
