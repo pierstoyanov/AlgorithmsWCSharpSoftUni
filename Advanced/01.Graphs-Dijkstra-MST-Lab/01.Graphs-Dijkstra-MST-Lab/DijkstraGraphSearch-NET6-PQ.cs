@@ -5,7 +5,7 @@ using System.Linq;
 
 class DijkstraGraphSearch
 {
-    public class Edge 
+    public class Edge
     {
         public int FirstNode { get; set; }
         public int SecondNode { get; set; }
@@ -21,7 +21,7 @@ class DijkstraGraphSearch
         edgesByNode = new Dictionary<int, List<Edge>>();
         // read graph & fill edgesByNode collection - int node: list[edges...]
         var edgesCount = int.Parse(Console.ReadLine());
-        
+
         for (int i = 0; i < edgesCount; i++)
         {
             var edgeArgs = Console.ReadLine().Split(", ").Select(int.Parse).ToArray();
@@ -102,9 +102,9 @@ class DijkstraGraphSearch
                     distance[otherNode] = newDistance;
                     pq.Enqueue(otherNode, (int)distance[otherNode]);
                 }
-               /* // update distance arr
+                // update distance arr
                 distance[otherNode] = Math.Min(distance[otherNode], newDistance);
-*/
+
             }
         }
 
