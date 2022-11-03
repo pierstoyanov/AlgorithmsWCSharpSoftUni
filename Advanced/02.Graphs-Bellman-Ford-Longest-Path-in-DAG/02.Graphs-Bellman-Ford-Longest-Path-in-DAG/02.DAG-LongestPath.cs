@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 
 public class LongestPathDAG
@@ -58,6 +59,10 @@ public class LongestPathDAG
             Array.Fill(distance, double.NegativeInfinity);
             distance[source] = 0;
 
+            var prev = new int[nodes + 1];
+            Array.Fill(prev, -1);
+
+
             // topological sort
             var sortedNodes = TopologicalDFS();
 
@@ -72,10 +77,12 @@ public class LongestPathDAG
                     if (newDistance > distance[edge.To])
                     {
                         distance[edge.To] = newDistance;
+                        prev[edge.To] = edge.From;
                     }
                 }
             }
 
+            PrintPath(prev, destination);
             Console.WriteLine(distance[destination]);
         }
 
