@@ -1,8 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
 
 namespace _03.Ex_Bellman_Ford_Longest_Path_in_DAG
 {
@@ -83,6 +82,7 @@ namespace _03.Ex_Bellman_Ford_Longest_Path_in_DAG
                     }
                 }
             }
+
             foreach (var edge in graph)
             {
                 // при повтарянето на foreach,
