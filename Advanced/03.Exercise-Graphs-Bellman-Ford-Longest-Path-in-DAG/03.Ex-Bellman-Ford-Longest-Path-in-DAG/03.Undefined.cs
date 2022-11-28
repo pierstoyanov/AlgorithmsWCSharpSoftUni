@@ -41,22 +41,21 @@ namespace _03.Ex_Bellman_Ford_Longest_Path_in_DAG
 
             // масив за дистанциите
             distance = new double[nodes + 1];
-            /*Array.Fill(distance, double.PositiveInfinity)*/;
-            for (int i = 0; i < nodes + 1; i++)
-            {
-                distance[i] = double.PositiveInfinity;
-            }
-            distance[source] = 0;
+            /*Array.Fill(distance, double.PositiveInfinity);*/
 
             // масив за пътя
             previous = new int[nodes + 1];
             /*Array.Fill(previous, -1);*/
+
             for (int i = 0; i < nodes + 1; i++)
             {
+                distance[i] = double.PositiveInfinity;
                 previous[i] = -1;
             }
 
-            for (int i = 0; i < nodes - 1; i++)
+            distance[source] = 0;
+
+            for (int i = 0; i < nodes - 2; i++)
             {
                 var updated = false;
 
@@ -75,11 +74,11 @@ namespace _03.Ex_Bellman_Ford_Longest_Path_in_DAG
                         previous[edge.To] = edge.From;
                         updated = true;
                     }
+                }
 
-                    if (!updated)
-                    {
-                        break;
-                    }
+                if (!updated)
+                {
+                    break;
                 }
             }
 
