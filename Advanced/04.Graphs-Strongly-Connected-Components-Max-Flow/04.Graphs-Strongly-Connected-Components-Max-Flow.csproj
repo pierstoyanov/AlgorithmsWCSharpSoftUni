@@ -6,6 +6,7 @@
     <RootNamespace>_04.Graphs_Strongly_Connected_Components_Max_Flow</RootNamespace>
     <ImplicitUsings>disable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>MaxFlow.EdmondsKarp</StartupObject>
   </PropertyGroup>
 
 </Project>
