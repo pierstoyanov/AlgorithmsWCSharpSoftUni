@@ -11,7 +11,7 @@ namespace ArticulationPoints
         private static bool[] visited;
         private static int[] depth;
         private static int[] lowpoint;
-        private static int[] parent;
+        private static int?[] parent;
 
         private static List<int> articulationPoints;
 
@@ -24,8 +24,10 @@ namespace ArticulationPoints
             visited = new bool[nodes];
             depth = new int[nodes];
             lowpoint = new int[nodes];
-            parent = new int[nodes];
-            Array.Fill(parent, -1);
+            // int nullable
+            parent = new int?[nodes];
+            // for int arr
+            // Array.Fill(parent, -1);
 
             for (int node = 0; node < graph.Length; node++)
             {
@@ -69,6 +71,7 @@ namespace ArticulationPoints
 
         private static void FindArticulationPoint(int node, int currentDepth)
         {
+            // mark node as visited, mark depth, assume lowpoint equals depth 
             visited[node] = true;
             depth[node] = currentDepth;
             lowpoint[node] = currentDepth;
@@ -84,7 +87,7 @@ namespace ArticulationPoints
                     FindArticulationPoint(child, currentDepth += 1);
                     
                     childCount += 1;
-
+                    // if child is visited, but the path is different than the original path
                     if (lowpoint[child] >= depth[node])
                     {
                         isArticulationPoint = true;
@@ -97,10 +100,15 @@ namespace ArticulationPoints
                     lowpoint[node] = Math.Min(lowpoint[node], depth[child]);
                 }
             }
-
-            // check for root
+/*
+ * 
+ *          when using int arr filled with -1, 
             if ((parent[node] == -1 && childCount > 1) ||
-                (parent[node] != -1 && isArticulationPoint))
+                 (parent[node] != -1 && isArticulationPoint))*/
+
+                // check for root and add item if is art. point
+                if ((parent[node] == null && childCount > 1) ||
+                (parent[node] != null && isArticulationPoint))
             {
                 articulationPoints.Add(node);
             }
