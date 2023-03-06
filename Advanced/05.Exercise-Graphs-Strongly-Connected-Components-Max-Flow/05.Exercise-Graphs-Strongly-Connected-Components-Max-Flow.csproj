@@ -4,7 +4,7 @@
     <OutputType>Exe</OutputType>
     <TargetFramework>net5.0</TargetFramework>
     <RootNamespace>_05.Exercise_Graphs_Strongly_Connected_Components_Max_Flow</RootNamespace>
-    <StartupObject>_05.Exercise_Graphs_Strongly_Connected_Components_Max_Flow.MaximumTasksAssignment</StartupObject>
+    <StartupObject>_05.Exercise_Graphs_Strongly_Connected_Components_Max_Flow.BiConnectedComponents</StartupObject>
   </PropertyGroup>
 
 </Project>
